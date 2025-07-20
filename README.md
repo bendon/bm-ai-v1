@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BM AI Voice Bot Landing Page
 
-## Getting Started
+A modern, responsive landing page for BM AI Voice Bot built with Next.js 15, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Modern Design**: Black and white aesthetic with professional animations
+- **Responsive**: Mobile-first design that works on all devices
+- **Interactive**: Smooth scrolling navigation and hover effects
+- **React Icons**: Beautiful black and white icons from Feather Icons
+- **TypeScript**: Fully typed for better development experience
+- **Tailwind CSS**: Utility-first styling with custom animations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install Dependencies**
+   ```bash
+   npm install react-icons
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Run Development Server**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. **Open Browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-To learn more about Next.js, take a look at the following resources:
+## 📱 Sections
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Hero**: Eye-catching introduction with tea farm background
+- **Stats**: Key performance metrics (92% satisfaction, 2M+ conversations)
+- **Product**: Technology overview with animated visual
+- **Features**: 6 key USPs with icons and descriptions
+- **Demo**: Interactive conversation preview
+- **Contact**: Email and phone contact information
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design Elements
 
-## Deploy on Vercel
+- **Color Scheme**: Black background with white text and accents
+- **Typography**: Gill Sans font family for professional look
+- **Icons**: React Icons (Feather Icons) in black and white
+- **Animations**: Smooth hover effects, orbital rings, and bounce animations
+- **Background**: Tea farm image with dark overlay and grid pattern
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📞 Contact Information
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: bm@payl.to
+- **Phone**: +254 - 736 - 355183
+- **Location**: Nairobi, Kenya
+- **Demo Phone**: +254711082454
+
+## 🛡️ Security Features
+
+- PCI DSS compliant infrastructure
+- End-to-end encryption
+- Bank-grade security protocols
+- Enterprise-level data protection
+
+## 🌍 Language Support
+
+- **English**: Full natural language processing
+- **Swahili**: Native language support
+- **Code-switching**: Seamless language transitions
+
+## 📊 Performance
+
+- 92% customer satisfaction rate
+- 60% faster issue resolution
+- 24/7 availability
+- 2M+ successful conversations
+
+## 🔧 Customization
+
+The landing page is built with modular components and can be easily customized:
+
+- Update contact information in the contact section
+- Modify statistics in the stats section
+- Change background images and colors
+- Add new features or sections as needed
+
+## 📄 License
+
+© 2025 BM AI Voice Bot. Powered by advanced language models on Ubuntu servers.
