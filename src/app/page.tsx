@@ -13,8 +13,11 @@ import {
   FiPhone,
   FiMapPin,
   FiMenu,
-  FiX
+  FiX,
+  FiCheck
 } from 'react-icons/fi';
+import Navigation from '@/components/Navigation';
+import { CallFlowDiagrams } from '@/components/CallFlowIcons';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -78,306 +81,233 @@ export default function Home() {
 
   return (
     <div className="bg-black text-white font-['Gill_Sans',_'Gill_Sans_MT',_Calibri,_sans-serif]">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/10 px-4 py-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="text-xl font-bold tracking-[2px] uppercase">BM</div>
-          
-          {/* Desktop Navigation */}
-          <ul className="hidden md:flex gap-8 list-none">
-            <li><a href="#product" className="text-white/80 hover:text-white transition-colors">Technology</a></li>
-            <li><a href="#usps" className="text-white/80 hover:text-white transition-colors">Features</a></li>
-            <li><a href="#demo" className="text-white/80 hover:text-white transition-colors">Demo</a></li>
-            <li><a href="/pricing" className="text-white/80 hover:text-white transition-colors">Pricing</a></li>
-            <li><a href="/about" className="text-white/80 hover:text-white transition-colors">About</a></li>
-            <li><a href="/contact" className="text-white/80 hover:text-white transition-colors">Contact</a></li>
-          </ul>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <FiX size={24} className="stroke-1" /> : <FiMenu size={24} className="stroke-1" />}
-          </button>
-
-          <a href="#contact" className="hidden md:block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5">
-            Get Started
-          </a>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-white/10">
-            <ul className="flex flex-col gap-4 mt-4">
-              <li><a href="#product" className="block text-white/80 hover:text-white" onClick={() => setIsMenuOpen(false)}>Technology</a></li>
-              <li><a href="#usps" className="block text-white/80 hover:text-white" onClick={() => setIsMenuOpen(false)}>Features</a></li>
-              <li><a href="#demo" className="block text-white/80 hover:text-white" onClick={() => setIsMenuOpen(false)}>Demo</a></li>
-              <li><a href="/pricing" className="block text-white/80 hover:text-white" onClick={() => setIsMenuOpen(false)}>Pricing</a></li>
-              <li><a href="/about" className="block text-white/80 hover:text-white" onClick={() => setIsMenuOpen(false)}>About</a></li>
-              <li><a href="/contact" className="block text-white/80 hover:text-white" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
-            </ul>
-          </div>
-        )}
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-fixed"
-          style={{
-            backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%), url('/images/tea-sector-loans-1200px.jpg')"
-          }}
-        />
-        
-        {/* Grid Overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full" style={{
-            backgroundImage: `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='grid' width='2' height='2' patternUnits='userSpaceOnUse'><path d='M 2 0 L 0 0 0 2' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='0.1'/></pattern></defs><rect width='100' height='100' fill='url(%23grid)'/></svg>")`
-          }} />
-        </div>
-
-        <div className="max-w-6xl mx-auto px-4 pt-32 pb-16 z-10 relative text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight uppercase">
-            NEXT-GENERATION<br />VOICE AI
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary AI voice technology that understands natural language and eliminates wait times. 
-            Transform your customer service with human-like conversations in English and Swahili.
-          </p>
+      <section className="min-h-[70vh] flex items-center relative overflow-hidden bg-black">
+        <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%), url('/images/tea-sector-loans-1200px.jpg')" }} />
+        <div className="relative z-10 w-full max-w-4xl mx-auto text-center py-24 px-4">
+          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight uppercase text-white drop-shadow-lg">Next-Generation<br />Voice AI</h1>
+          <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">Transform your customer service and outreach with BM AI’s Inbound and Outbound Voice Agents. Human-like conversations. Zero wait times. 24/7 automation.</p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href="#demo" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">
-              Experience Demo
-            </a>
-            <a href="#contact" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all">
-              Get Pricing
-            </a>
+            <a href="/#demo" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">How it Works</a>
+            <a href="/pricing" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all">Get Pricing</a>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Quick Value/Stats Section */}
       <section className="py-16 bg-black/50 border-t border-b border-white/10">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-5xl font-black mb-2">92%</div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">Satisfaction Rate</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black mb-2">2M+</div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">Conversations</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black mb-2">60%</div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">Faster Resolution</div>
-            </div>
-            <div>
-              <div className="text-5xl font-black mb-2">24/7</div>
-              <div className="text-sm text-white/60 uppercase tracking-wider">Availability</div>
-            </div>
+        <div className="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div className="text-5xl font-black mb-2 text-white">92%</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Satisfaction Rate</div>
+          </div>
+          <div>
+            <div className="text-5xl font-black mb-2 text-white">2M+</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Conversations</div>
+          </div>
+          <div>
+            <div className="text-5xl font-black mb-2 text-white">60%</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Faster Resolution</div>
+          </div>
+          <div>
+            <div className="text-5xl font-black mb-2 text-white">24/7</div>
+            <div className="text-sm text-white/60 uppercase tracking-wider">Availability</div>
           </div>
         </div>
       </section>
 
-      {/* Product Section */}
-      <section id="product" className="py-32">
+      {/* Inbound/Outbound Split Section */}
+      <section className="py-24 bg-black/95 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-4xl md:text-6xl font-black mb-8 uppercase leading-tight tracking-tight">
-                WHAT&apos;S IN THE<br />AI VOICE BOT
-              </h2>
-              <p className="text-xl text-white/80 mb-12 leading-relaxed">
-                BM AI Voice Bot comes with everything you need to revolutionize customer service. 
-                Powered by advanced language models running on enterprise Ubuntu servers.
-              </p>
-              
-              <ul className="space-y-6 mb-12">
-                {[
-                  "Natural Language Processing in English & Swahili",
-                  "Real-time Transaction Processing", 
-                  "Intelligent Call Routing & Escalation",
-                  "PCI DSS Compliant Security",
-                  "24/7 Automated Customer Support",
-                  "Advanced Analytics & Reporting"
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center gap-4 text-lg text-white/90 py-4 border-b border-white/10">
-                    <span className="text-white font-bold text-xl">→</span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              <a href="#demo" className="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1">
-                See Specifications
-              </a>
-            </div>
-            
-            {/* Product Visual */}
-            <div className="relative h-[500px] flex items-center justify-center">
-              {/* Orbital Rings */}
-              <div className="absolute w-96 h-96 border border-white/20 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
-              <div className="absolute w-[500px] h-[500px] border border-white/20 rounded-full animate-spin" style={{ animationDuration: '30s', animationDirection: 'reverse' }} />
-              
-              {/* Central Bot Visual */}
-              <div className="w-72 h-72 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl flex items-center justify-center relative animate-bounce" style={{ animationDuration: '6s' }}>
-                <FiMic size={96} className="text-white animate-pulse stroke-1" />
+          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">AI Voice Agents for Every Need</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Inbound AI */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-xl">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">Inbound AI Agent</h3>
+                <p className="text-white/80 mb-6">Handle incoming customer calls, answer questions, process transactions, and provide 24/7 support in English & Swahili. Perfect for banks, telcos, and enterprises seeking to automate and enhance customer experience.</p>
+                <ul className="mb-6 space-y-3 text-white/80">
+                  {[
+                    'Natural language understanding',
+                    'Real-time account info & transactions',
+                    'Bilingual (English & Swahili)',
+                    'Secure, PCI DSS compliant',
+                    'Analytics & reporting',
+                  ].map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-base">
+                      <FiCheck className="text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+              <a href="/inbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</a>
+            </div>
+            {/* Outbound AI */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-xl">
+              <div>
+                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">Outbound AI Agent</h3>
+                <p className="text-white/80 mb-6">Automate outbound calls for reminders, collections, notifications, surveys, and more. Reach thousands instantly with personalized, interactive voice calls—no human agent required.</p>
+                <ul className="mb-6 space-y-3 text-white/80">
+                  {[
+                    'Bulk & scheduled calling',
+                    'Personalized scripts',
+                    'Payment & appointment reminders',
+                    'Surveys & feedback collection',
+                    'Emergency notifications',
+                  ].map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-base">
+                      <FiCheck className="text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <a href="/outbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</a>
             </div>
           </div>
         </div>
       </section>
 
       {/* USPs Section */}
-      <section id="usps" className="py-32 bg-black/50 border-t border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-black mb-16 uppercase tracking-tight">
-            WHY CHOOSE BM
-          </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {usps.map((usp, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 rounded-3xl p-8 text-left hover:-translate-y-3 hover:bg-white/8 hover:border-white/20 hover:shadow-2xl transition-all duration-300 backdrop-blur-xl group">
-                <div className="w-full h-1 bg-gradient-to-r from-white/80 to-white/20 mb-6 rounded" />
-                <div className="text-white mb-6 group-hover:scale-110 transition-transform">
-                  {usp.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-4 uppercase tracking-wider text-white">
-                  {usp.title}
-                </h3>
-                <p className="text-white/80 leading-relaxed">
-                  {usp.description}
-                </p>
-              </div>
-            ))}
+      <section className="py-24 bg-black border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">Why Choose BM</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="bg-black border border-white/20 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl">
+              <FiZap size={64} color="white" strokeWidth={1.5} className="mb-6" />
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-wide text-white">Zero Wait Times</h3>
+              <p className="text-white/80 text-base">Customers connect instantly with BM. No more frustrating menu navigation or long hold queues. Get immediate, intelligent responses 24/7.</p>
+            </div>
+            <div className="bg-black border border-white/20 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl">
+              <FiGlobe size={64} color="white" strokeWidth={1.5} className="mb-6" />
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-wide text-white">Bilingual Intelligence</h3>
+              <p className="text-white/80 text-base">Seamlessly handles conversations in both English and Swahili. Code-switching supported for natural Kenyan communication patterns.</p>
+            </div>
+            <div className="bg-black border border-white/20 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl">
+              <FiShield size={64} color="white" strokeWidth={1.5} className="mb-6" />
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-wide text-white">Bank-Grade Security</h3>
+              <p className="text-white/80 text-base">PCI DSS compliant infrastructure with end-to-end encryption. Your customer data is protected with enterprise-level security protocols.</p>
+            </div>
+            <div className="bg-black border border-white/20 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl">
+              <FiDollarSign size={64} color="white" strokeWidth={1.5} className="mb-6" />
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-wide text-white">Cost Reduction</h3>
+              <p className="text-white/80 text-base">Reduce call center operational costs by up to 40% while improving customer satisfaction. Handle more inquiries with fewer human agents.</p>
+            </div>
+            <div className="bg-black border border-white/20 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl">
+              <FiRefreshCw size={64} color="white" strokeWidth={1.5} className="mb-6" />
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-wide text-white">Real-Time Processing</h3>
+              <p className="text-white/80 text-base">Process transactions, check balances, and update accounts in real-time. Direct integration with your existing systems for seamless operations.</p>
+            </div>
+            <div className="bg-black border border-white/20 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl">
+              <FiBarChart size={64} color="white" strokeWidth={1.5} className="mb-6" />
+              <h3 className="text-xl font-bold mb-3 uppercase tracking-wide text-white">Smart Analytics</h3>
+              <p className="text-white/80 text-base">Gain insights into customer behavior, common pain points, and service optimization opportunities through advanced conversation analytics.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Demo Section */}
-      <section id="demo" className="py-32 bg-black/80 border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-black mb-16 uppercase tracking-tight">
-            SEE BM IN ACTION
-          </h2>
-          
-          {/* Enhanced Conversation Demo */}
-          <div className="max-w-5xl mx-auto mb-16">
-            <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-xl">
-              {/* Chat Header */}
-              <div className="flex items-center gap-3 mb-8 p-4 border-b border-white/10">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-white/80 font-medium">BM AI Assistant - Live Demo</span>
-                <div className="ml-auto flex items-center gap-2">
-                  <div className="w-2 h-2 bg-white/40 rounded-full"></div>
-                  <div className="w-2 h-2 bg-white/40 rounded-full"></div>
-                  <div className="w-2 h-2 bg-white/40 rounded-full"></div>
+      {/* How It Works Section */}
+      <section id="demo" className="py-24 bg-black border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">How It Works</h2>
+          <CallFlowDiagrams />
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section id="use-cases" className="py-24 bg-black/95 border-t border-white/10">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">Use Cases</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Inbound Use Cases */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">Inbound Use Cases</h3>
+              <div className="space-y-6">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Customer Support Hotlines</span>
+                  <span className="text-white/80">Banks, telcos, insurance, retail</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Account & Transaction Queries</span>
+                  <span className="text-white/80">Balance checks, transaction history, statements</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Service Information & FAQs</span>
+                  <span className="text-white/80">Automated answers to common questions</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Complaint Resolution</span>
+                  <span className="text-white/80">Automated intake and escalation</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Automated Self-Service</span>
+                  <span className="text-white/80">PIN resets, bill payments, service activation</span>
                 </div>
               </div>
-              
-              {/* Enhanced Chat Messages */}
-              <div className="space-y-4 max-h-96 overflow-y-auto">
-                {[
-                  { type: 'ai', text: "🎤 Niaje!\nI'm BM, your AI assistant.\nNaweza kukusaidia in English or Swahili.\nHow may I help you today?", time: "2:30 PM" },
-                  { type: 'user', text: "Hi BM! I want to check my account balance.\nNataka kuconfirm pia transaction nilifanya leo asubuhi.", time: "2:31 PM" },
-                  { type: 'ai', text: "Of course! Sawa, let me help you with that. Can you confirm your phone number please? Tafadhali nambari yako ya simu?", time: "2:31 PM" },
-                  { type: 'user', text: "0722123456", time: "2:32 PM" },
-                  { type: 'ai', text: "Perfect! Sawa sana. Your current balance is KSh 1,450. Would you like to see recent transactions? Unataka kuona transactions za hivi karibuni?", time: "2:32 PM" },
-                  { type: 'user', text: "Yes, please show me the last 5 transactions. Naomba transactions 5 za mwisho", time: "2:33 PM" },
-                  { type: 'ai', text: "Here are your last 5 transactions:\n\n1. M-Pesa Deposit: +KSh 5,000 (Today 10:30 AM)\n2. Shop Payment: -KSh 2,150 (Yesterday 3:45 PM)\n3. ATM Withdrawal: -KSh 1,000 (Yesterday 11:20 AM)\n4. Salary Credit: +KSh 25,000 (2 days ago)\n5. Utility Bill: -KSh 3,400 (3 days ago)\n\nTotal balance: KSh 1,450\n\nKuna transaction yoyote unayotaka kujua zaidi?", time: "2:33 PM" },
-                  { type: 'user', text: "Hiyo M-Pesa deposit, ni nani aliyetuma?", time: "2:34 PM" },
-                  { type: 'ai', text: "The M-Pesa deposit was from John Kamau. Alikuwa anatumia number 0712***678. Would you like me to save this contact for future reference? Unataka nisave contact hii?", time: "2:34 PM" },
-                  { type: 'user', text: "Yes, please save it. Asante BM!", time: "2:35 PM" },
-                  { type: 'ai', text: "You're welcome! Karibu sana. Contact imesave. Is there anything else I can help you with today? Kuna jambo lingine naweza kukusaidia?", time: "2:35 PM" }
-                ].map((message, index) => (
-                  <div 
-                    key={index}
-                    className={`flex ${message.type === 'ai' ? 'justify-start' : 'justify-end'}`}
-                    style={{ animationDelay: `${index * 0.3}s` }}
-                  >
-                    <div className={`max-w-xs md:max-w-md p-4 rounded-2xl ${
-                      message.type === 'ai' 
-                        ? 'bg-white/10 border-l-4 border-white text-left' 
-                        : 'bg-white/5 border-r-4 border-white/50 text-right'
-                    }`}>
-                      <div className="text-sm text-white/60 mb-1">{message.time}</div>
-                      <div className="whitespace-pre-line">{message.text}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Typing Indicator */}
-              <div className="mt-4 flex items-center gap-2 text-white/60">
-                <div className="flex gap-1">
-                  <div className="w-2 h-2 bg-white/40 rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-2 h-2 bg-white/40 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            </div>
+            {/* Outbound Use Cases */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">Outbound Use Cases</h3>
+              <div className="space-y-6">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Debt Recovery</span>
+                  <span className="text-white/80">Banks, microfinance, loan companies</span>
                 </div>
-                <span className="text-sm">BM is typing...</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Bill Reminders</span>
+                  <span className="text-white/80">Utilities, telecom, insurance</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">School Communication</span>
+                  <span className="text-white/80">Fee reminders, event notifications, emergency alerts</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Appointment Reminders</span>
+                  <span className="text-white/80">Hospitals, clinics, service providers</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Survey & Feedback</span>
+                  <span className="text-white/80">Market research, customer satisfaction</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Lead Generation</span>
+                  <span className="text-white/80">Sales calls, product promotions</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
+                  <span className="text-lg font-bold text-white mb-2">Emergency Notifications</span>
+                  <span className="text-white/80">Government alerts, safety warnings</span>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Demo CTA */}
-          <div className="flex flex-col md:flex-row gap-8 justify-center">
-            <button 
-              onClick={simulateCall}
-              className="bg-white/10 text-white border border-white/30 px-12 py-6 rounded-2xl text-xl font-semibold hover:bg-white/20 hover:-translate-y-1 hover:shadow-2xl transition-all backdrop-blur-xl flex items-center gap-3 justify-center"
-            >
-              <FiPhone size={24} className="stroke-1" />
-              Call Live Demo: +254711082454
-            </button>
-            <a 
-              href="/pricing"
-              className="bg-white text-black px-12 py-6 rounded-2xl text-xl font-semibold hover:bg-white/90 hover:-translate-y-1 hover:shadow-2xl transition-all flex items-center gap-3 justify-center"
-            >
-              View Pricing
-            </a>
-          </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-black/90 border-t border-white/10">
+      {/* Pricing Preview Section */}
+      <section className="py-24 bg-black border-t border-white/10">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tight">
-            GET STARTED
-          </h2>
-          <p className="text-xl text-white/80 mb-12 leading-relaxed">
-            Ready to transform your customer service with next-generation AI voice technology? 
-            Contact us to discuss your requirements and schedule a custom demonstration.
-          </p>
-          
-          <div className="bg-black/80 border border-white/10 rounded-3xl p-12 backdrop-blur-xl">
-            <a 
-              href="mailto:bm@payl.to?subject=BM AI Voice Bot Inquiry&body=Hello, I'm interested in learning more about BM AI Voice Bot for my organization."
-              className="inline-flex items-center gap-3 bg-white text-black px-12 py-6 rounded-2xl text-xl font-bold hover:bg-white/90 hover:-translate-y-1 hover:shadow-2xl transition-all mb-8"
-            >
-              <FiMail size={24} className="stroke-1" />
-              Email Us: bm@payl.to
-            </a>
-            
-            <div className="flex flex-col md:flex-row gap-8 justify-center mt-8">
-              <div className="flex items-center gap-2 text-white/80">
-                <FiPhone size={20} className="stroke-1" />
-                <span>+254 - 736 - 355183</span>
-              </div>
-              <div className="flex items-center gap-2 text-white/80">
-                <FiMapPin size={20} className="stroke-1" />
-                <span>Nairobi, Kenya</span>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tight">Simple, Transparent Pricing</h2>
+          <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">Pay only for what you use. Our flat-rate pricing ensures predictable costs with no hidden fees. Minimum bundle, no expiry, and on-demand options for enterprises.</p>
+          <a href="/pricing" className="inline-block bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all">View Full Pricing</a>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black text-white/60 py-12 text-center border-t border-white/10">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="border-t border-white/10 pt-8">
-            <p>&copy; 2025 BM AI Voice Bot. Powered by advanced language models on Ubuntu servers.</p>
+      {/* Footer Section */}
+      <footer className="py-12 bg-black/95 border-t border-white/10 mt-12">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-white/60 text-sm">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
+            <span className="font-bold text-white text-lg">BM AI Voice Bot</span>
+            <span>© {new Date().getFullYear()} BM AI. All rights reserved.</span>
+            <a href="/about" className="hover:text-white">About</a>
+            <a href="/privacy" className="hover:text-white">Privacy</a>
+            <a href="/terms" className="hover:text-white">Terms</a>
+          </div>
+          <div>
+            <span>Nairobi, Kenya | bm@payl.to | +254 736 355183</span>
           </div>
         </div>
       </footer>

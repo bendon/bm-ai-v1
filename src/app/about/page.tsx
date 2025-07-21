@@ -11,6 +11,7 @@ import {
   FiHeart
 } from 'react-icons/fi';
 import Link from 'next/link';
+import Navigation from '@/components/Navigation';
 
 export default function About() {
   const team = [
@@ -54,23 +55,7 @@ export default function About() {
 
   return (
     <div className="bg-black text-white font-['Gill_Sans',_'Gill_Sans_MT',_Calibri,_sans-serif] min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/10 px-4 py-4">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold tracking-[2px] uppercase">BM</Link>
-          
-          <div className="hidden md:flex gap-8 list-none">
-            <Link href="/#product" className="text-white/80 hover:text-white transition-colors">Technology</Link>
-            <Link href="/#usps" className="text-white/80 hover:text-white transition-colors">Features</Link>
-            <Link href="/#demo" className="text-white/80 hover:text-white transition-colors">Demo</Link>
-            <Link href="/#contact" className="text-white/80 hover:text-white transition-colors">Contact</Link>
-          </div>
-
-          <Link href="/#contact" className="hidden md:block bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-0.5">
-            Get Started
-          </Link>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="pt-32 pb-16">
