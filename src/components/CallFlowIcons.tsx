@@ -230,35 +230,6 @@ export const CallFlowDiagrams = () => {
     },
   ];
 
-  type FlowStepProps = {
-    step: { label: string; desc: string; icon: React.ReactNode };
-    index: number;
-    isLast: boolean;
-    isVertical?: boolean;
-  };
-
-  const FlowStep = ({ step, index, isLast, isVertical = false }: FlowStepProps) => (
-    <div className="flex flex-col items-center md:flex-row md:items-end">
-      <div className="flex flex-col items-center">
-        <div className="bg-white/10 border-2 border-white/30 rounded-full w-24 h-24 flex items-center justify-center mb-3 shadow-2xl">
-          {step.icon}
-        </div>
-        <span className="text-white font-bold text-sm text-center mb-2">{step.label}</span>
-        <span className="text-white/80 text-xs text-center mb-4 md:mb-0 max-w-[8rem]">{step.desc}</span>
-      </div>
-      {!isLast && (
-        <>
-          <svg className="hidden md:block mx-4" width="40" height="24" viewBox="0 0 40 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 12h32m0 0l-6-6m6 6l-6 6" stroke="#fff" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <svg className="md:hidden my-2" width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 4v32m0 0l6-6m-6 6l-6-6" stroke="#fff" strokeOpacity="0.5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </>
-      )}
-    </div>
-  );
-
   return (
     <div className="space-y-20">
       {/* Inbound Call Flow */}

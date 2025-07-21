@@ -15,13 +15,6 @@ export default function Navigation() {
     { href: '/#use-cases', label: 'Use Cases' },
   ];
 
-  const menuItems = [
-    { label: 'Solutions', dropdown: true },
-    { href: '/#demo', label: 'How it Works' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/contact', label: 'Contact' },
-  ];
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/10 px-4 py-4 shadow-lg">
       <div className="max-w-6xl mx-auto flex justify-between items-center">

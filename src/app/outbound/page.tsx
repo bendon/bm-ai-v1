@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation';
 import { FiCheck, FiTarget } from 'react-icons/fi';
+import Link from 'next/link';
 
 export default function OutboundAI() {
   const features = [
@@ -48,7 +49,7 @@ export default function OutboundAI() {
           ))}
         </div>
         <div className="text-center">
-          <a href="/#demo" className="inline-block bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all">How it Works</a>
+          <Link href="/#demo" className="inline-block bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all">How it Works</Link>
         </div>
       </section>
     </div>

@@ -1,27 +1,20 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { 
-  FiMic, 
   FiZap, 
   FiGlobe, 
   FiShield, 
   FiDollarSign, 
   FiRefreshCw, 
   FiBarChart,
-  FiMail,
-  FiPhone,
-  FiMapPin,
-  FiMenu,
-  FiX,
   FiCheck
 } from 'react-icons/fi';
 import Navigation from '@/components/Navigation';
 import { CallFlowDiagrams } from '@/components/CallFlowIcons';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   useEffect(() => {
     // Smooth scrolling for anchor links
     const handleSmoothScroll = (e: MouseEvent) => {
@@ -44,41 +37,6 @@ export default function Home() {
     alert("🎤 Connecting to BM AI Voice Bot...\n\nNiaje!\nI'm BM, your AI Assistant.\nNaweza kukusaidia in English or Swahili.\nHow may I help you today?\n\n(This is a demo preview)");
   };
 
-  const usps = [
-    {
-      icon: <FiZap size={48} className="stroke-1" />,
-      title: "Zero Wait Times",
-      description: "Customers connect instantly with BM. No more frustrating menu navigation or long hold queues. Get immediate, intelligent responses 24/7."
-    },
-    {
-      icon: <FiGlobe size={48} className="stroke-1" />,
-      title: "Bilingual Intelligence", 
-      description: "Seamlessly handles conversations in both English and Swahili. Code-switching supported for natural Kenyan communication patterns."
-    },
-    {
-      icon: <FiShield size={48} className="stroke-1" />,
-      title: "Bank-Grade Security",
-      description: "PCI DSS compliant infrastructure with end-to-end encryption. Your customer data is protected with enterprise-level security protocols."
-    },
-    {
-      icon: <FiDollarSign size={48} className="stroke-1" />,
-      title: "Cost Reduction",
-      description: "Reduce call center operational costs by up to 40% while improving customer satisfaction. Handle more inquiries with fewer human agents."
-    },
-    {
-      icon: <FiRefreshCw size={48} className="stroke-1" />,
-      title: "Real-Time Processing",
-      description: "Process transactions, check balances, and update accounts in real-time. Direct integration with your existing systems for seamless operations."
-    },
-    {
-      icon: <FiBarChart size={48} className="stroke-1" />,
-      title: "Smart Analytics",
-      description: "Gain insights into customer behavior, common pain points, and service optimization opportunities through advanced conversation analytics."
-    }
-  ];
-
-
-
   return (
     <div className="bg-black text-white font-['Gill_Sans',_'Gill_Sans_MT',_Calibri,_sans-serif]">
       <Navigation />
@@ -90,8 +48,8 @@ export default function Home() {
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight uppercase text-white drop-shadow-lg">Next-Generation<br />Voice AI</h1>
           <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">Transform your customer service and outreach with BM AI’s Inbound and Outbound Voice Agents. Human-like conversations. Zero wait times. 24/7 automation.</p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <a href="/#demo" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">How it Works</a>
-            <a href="/pricing" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all">Get Pricing</a>
+            <Link href="/#demo" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">How it Works</Link>
+            <Link href="/pricing" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all">Get Pricing</Link>
           </div>
         </div>
       </section>
@@ -143,7 +101,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <a href="/inbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</a>
+              <Link href="/inbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</Link>
             </div>
             {/* Outbound AI */}
             <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-xl">
@@ -165,7 +123,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <a href="/outbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</a>
+              <Link href="/outbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</Link>
             </div>
           </div>
         </div>
@@ -292,7 +250,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-black mb-8 uppercase tracking-tight">Simple, Transparent Pricing</h2>
           <p className="text-xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed">Pay only for what you use. Our flat-rate pricing ensures predictable costs with no hidden fees. Minimum bundle, no expiry, and on-demand options for enterprises.</p>
-          <a href="/pricing" className="inline-block bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all">View Full Pricing</a>
+          <Link href="/pricing" className="inline-block bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all">View Full Pricing</Link>
         </div>
       </section>
 
@@ -302,9 +260,9 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
             <span className="font-bold text-white text-lg">BM AI Voice Bot</span>
             <span>© {new Date().getFullYear()} BM AI. All rights reserved.</span>
-            <a href="/about" className="hover:text-white">About</a>
-            <a href="/privacy" className="hover:text-white">Privacy</a>
-            <a href="/terms" className="hover:text-white">Terms</a>
+            <Link href="/about" className="hover:text-white">About</Link>
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
           </div>
           <div>
             <span>Nairobi, Kenya | bm@payl.to | +254 736 355183</span>

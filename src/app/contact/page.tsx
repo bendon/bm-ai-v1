@@ -23,11 +23,8 @@ export default function Contact() {
     interest: 'general'
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
     
     // Simulate form submission
     setTimeout(() => {
@@ -40,7 +37,6 @@ export default function Contact() {
         message: '',
         interest: 'general'
       });
-      setIsSubmitting(false);
     }, 2000);
   };
 
