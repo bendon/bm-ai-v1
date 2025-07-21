@@ -63,7 +63,7 @@ export default function Pricing() {
   };
 
   return (
-    <div className="bg-black text-white font-['Gill_Sans',_'Gill_Sans_MT',_Calibri,_sans-serif] min-h-screen">
+    <div className="bg-black text-white min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -367,15 +367,6 @@ export default function Pricing() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-black text-white/60 py-12 text-center border-t border-white/10">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="border-t border-white/10 pt-8">
-            <p>&copy; 2025 BM AI Voice Bot. Powered by advanced language models on Ubuntu servers.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 } 

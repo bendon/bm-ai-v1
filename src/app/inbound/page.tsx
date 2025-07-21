@@ -21,7 +21,7 @@ export default function InboundAI() {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen font-['Gill_Sans',_'Gill_Sans_MT',_Calibri,_sans-serif]">
+    <div className="bg-black text-white min-h-screen">
       <Navigation />
       <section className="pt-32 pb-16 text-center">
         <h1 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tight">Inbound AI Agent</h1>

@@ -38,14 +38,16 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-black text-white font-['Gill_Sans',_'Gill_Sans_MT',_Calibri,_sans-serif]">
+    <div className="bg-black text-white">
       <Navigation />
 
       {/* Hero Section */}
       <section className="min-h-[70vh] flex items-center relative overflow-hidden bg-black">
         <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%), url('/images/tea-sector-loans-1200px.jpg')" }} />
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center py-24 px-4">
-          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight uppercase text-white drop-shadow-lg">Next-Generation<br />Voice AI</h1>
+          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight uppercase text-white drop-shadow-lg">
+            NEXT GENERATION<br />VOICE AI
+          </h1>
           <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">Transform your customer service and outreach with BM AI’s Inbound and Outbound Voice Agents. Human-like conversations. Zero wait times. 24/7 automation.</p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Link href="/#demo" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">How it Works</Link>
@@ -253,22 +255,6 @@ export default function Home() {
           <Link href="/pricing" className="inline-block bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all">View Full Pricing</Link>
         </div>
       </section>
-
-      {/* Footer Section */}
-      <footer className="py-12 bg-black/95 border-t border-white/10 mt-12">
-        <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6 text-white/60 text-sm">
-          <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center">
-            <span className="font-bold text-white text-lg">BM AI Voice Bot</span>
-            <span>© {new Date().getFullYear()} BM AI. All rights reserved.</span>
-            <Link href="/about" className="hover:text-white">About</Link>
-            <Link href="/privacy" className="hover:text-white">Privacy</Link>
-            <Link href="/terms" className="hover:text-white">Terms</Link>
-          </div>
-          <div>
-            <span>Nairobi, Kenya | bm@payl.to | +254 736 355183</span>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
