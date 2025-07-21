@@ -115,53 +115,58 @@ export default function Pricing() {
           </div>
           
           <div className="relative bg-white/10 border border-white/30 rounded-3xl p-12 backdrop-blur-xl">
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-8 py-3 rounded-full text-lg font-bold">
-              FLAGSHIP PRODUCT
-            </div>
-
-            <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold mb-6">{mainProduct.name}</h3>
-              <div className="mb-6">
-                <span className="text-6xl font-black">{mainProduct.price}</span>
-                <span className="text-white/60 ml-3 text-2xl">{mainProduct.period}</span>
+            <div className="flex flex-col items-center">
+              {/* Badge */}
+              <div className="relative z-10 mb-4 md:mb-0 md:-mb-8 w-full flex justify-center">
+                <span className="inline-block bg-white text-black px-6 py-3 rounded-full font-bold text-lg shadow-lg">
+                  FLAGSHIP PRODUCT
+                </span>
               </div>
-              <div className="bg-white/10 border border-white/20 rounded-2xl p-4 mb-6">
-                <p className="text-lg font-bold text-white">💳 {mainProduct.minimumPurchase}</p>
-                <p className="text-white/80 text-sm">8,000 minutes included - never expires</p>
-              </div>
-              <p className="text-xl text-white/80 max-w-2xl mx-auto">{mainProduct.description}</p>
-            </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div>
-                <h4 className="font-bold text-xl mb-6">What&apos;s included:</h4>
-                <div className="space-y-4">
-                  {mainProduct.features.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <FiCheck size={20} className="text-green-400 stroke-1 flex-shrink-0" />
-                      <span className="text-white/90">{feature}</span>
-                    </div>
-                  ))}
+              <div className="text-center mb-12">
+                <h3 className="text-4xl font-bold mb-6">{mainProduct.name}</h3>
+                <div className="mb-6">
+                  <span className="text-6xl font-black">{mainProduct.price}</span>
+                  <span className="text-white/60 ml-3 text-2xl">{mainProduct.period}</span>
+                </div>
+                <div className="bg-white/10 border border-white/20 rounded-2xl p-4 mb-6">
+                  <p className="text-lg font-bold text-white">💳 {mainProduct.minimumPurchase}</p>
+                  <p className="text-white/80 text-sm">8,000 minutes included - never expires</p>
+                </div>
+                <p className="text-xl text-white/80 max-w-2xl mx-auto">{mainProduct.description}</p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                  <h4 className="font-bold text-xl mb-6">What&apos;s included:</h4>
+                  <div className="space-y-4">
+                    {mainProduct.features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-3">
+                        <FiCheck size={20} className="text-green-400 stroke-1 flex-shrink-0" />
+                        <span className="text-white/90">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+                  <h4 className="font-bold text-xl mb-4">Free Bonus:</h4>
+                  <div className="flex items-center gap-3 mb-4">
+                    <FiCheck size={24} className="text-green-400 stroke-1" />
+                    <span className="text-xl font-bold text-white">Chatbot Included</span>
+                  </div>
+                  <p className="text-white/80">
+                    Get our AI chatbot completely free with every Voice Agent subscription. 
+                    Perfect for handling text-based inquiries alongside voice calls.
+                  </p>
                 </div>
               </div>
-              
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <h4 className="font-bold text-xl mb-4">Free Bonus:</h4>
-                <div className="flex items-center gap-3 mb-4">
-                  <FiCheck size={24} className="text-green-400 stroke-1" />
-                  <span className="text-xl font-bold text-white">Chatbot Included</span>
-                </div>
-                <p className="text-white/80">
-                  Get our AI chatbot completely free with every Voice Agent subscription. 
-                  Perfect for handling text-based inquiries alongside voice calls.
-                </p>
-              </div>
-            </div>
 
-            <div className="text-center">
-              <button className="bg-white text-black px-12 py-6 rounded-2xl text-xl font-bold hover:bg-white/90 hover:-translate-y-1 hover:shadow-2xl transition-all">
-                {mainProduct.cta}
-              </button>
+              <div className="text-center">
+                <button className="bg-white text-black px-12 py-6 rounded-2xl text-xl font-bold hover:bg-white/90 hover:-translate-y-1 hover:shadow-2xl transition-all">
+                  {mainProduct.cta}
+                </button>
+              </div>
             </div>
           </div>
         </div>
