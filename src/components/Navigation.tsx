@@ -9,9 +9,10 @@ export default function Navigation() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const solutionsDropdown = [
-    { href: '/inbound', label: 'Inbound AI' },
-    { href: '/outbound', label: 'Outbound AI' },
-    { href: '/#usps', label: 'Features' },
+    { href: '/#services', label: 'All Services' },
+    { href: '/#services', label: 'SMS' },
+    { href: '/#services', label: 'Voice & Telephony' },
+    { href: '/#services', label: 'WhatsApp' },
     { href: '/#use-cases', label: 'Use Cases' },
   ];
 
@@ -33,7 +34,7 @@ export default function Navigation() {
             {isDropdownOpen && (
               <ul className="absolute left-0 mt-2 w-48 bg-black border border-white/10 rounded-lg shadow-xl z-50">
                 {solutionsDropdown.map((item) => (
-                  <li key={item.href}>
+                  <li key={item.label}>
                     <Link
                       href={item.href}
                       className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors rounded-lg"
@@ -47,6 +48,7 @@ export default function Navigation() {
             )}
           </li>
           {/* Other menu items */}
+          <li><Link href="/#services" className="text-white/80 hover:text-white transition-colors font-medium">Services</Link></li>
           <li><Link href="/#demo" className="text-white/80 hover:text-white transition-colors font-medium">How it Works</Link></li>
           <li><Link href="/pricing" className="text-white/80 hover:text-white transition-colors font-medium">Pricing</Link></li>
           <li><Link href="/contact" className="text-white/80 hover:text-white transition-colors font-medium">Contact</Link></li>
@@ -60,10 +62,12 @@ export default function Navigation() {
             Experience Demo
           </Link>
           <Link
-            href="/contact"
+            href="http://bmaiapp.payl.to/"
             className="bg-white text-black px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-sm md:text-base text-center hover:bg-white/90 transition-all"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Get Started
+            Sign Up
           </Link>
         </div>
         {/* Mobile Menu Button */}
@@ -85,7 +89,7 @@ export default function Navigation() {
                 <summary className="text-white/80 hover:text-white py-2 font-medium cursor-pointer flex items-center gap-1">Solutions <FiChevronDown size={16} /></summary>
                 <ul className="pl-4 mt-2">
                   {solutionsDropdown.map((item) => (
-                    <li key={item.href}>
+                    <li key={item.label}>
                       <Link
                         href={item.href}
                         className="block text-white/80 hover:text-white py-2"
@@ -98,6 +102,7 @@ export default function Navigation() {
                 </ul>
               </details>
             </li>
+            <li><Link href="/#services" className="block text-white/80 hover:text-white py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
             <li><Link href="/#demo" className="block text-white/80 hover:text-white py-2 font-medium" onClick={() => setIsMenuOpen(false)}>How it Works</Link></li>
             <li><Link href="/pricing" className="block text-white/80 hover:text-white py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Pricing</Link></li>
             <li><Link href="/contact" className="block text-white/80 hover:text-white py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
@@ -112,11 +117,13 @@ export default function Navigation() {
               Experience Demo
             </Link>
             <Link
-              href="/#contact"
+              href="http://bmaiapp.payl.to/"
               className="w-full bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all"
               onClick={() => setIsMenuOpen(false)}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Get Started
+              Sign Up
             </Link>
           </div>
         </div>

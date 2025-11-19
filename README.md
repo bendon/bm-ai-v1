@@ -46,9 +46,9 @@ A modern, responsive landing page for BM AI Voice Bot built with Next.js 15, Typ
 ## 📞 Contact Information
 
 - **Email**: bm@payl.to
-- **Phone**: +254 - 736 - 355183
+- **Phone**: +254 - 743 - 799799
 - **Location**: Nairobi, Kenya
-- **Demo Phone**: +254711082454
+- **Demo Phone**: +254 709 369940
 
 ## 🛡️ Security Features
 

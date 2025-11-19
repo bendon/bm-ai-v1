@@ -34,7 +34,7 @@ export default function Home() {
   }, []);
 
   const simulateCall = () => {
-    alert("🎤 Connecting to BM AI Voice Bot...\n\nNiaje!\nI'm BM, your AI Assistant.\nNaweza kukusaidia in English or Swahili.\nHow may I help you today?\n\n(This is a demo preview)");
+    alert("🎤 Connecting to BM AI...\n\nNiaje!\nI'm BM, your AI Assistant.\nNaweza kukusaidia in English or Swahili.\nHow may I help you today?\n\n(This is a demo preview)");
   };
 
   return (
@@ -46,11 +46,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%), url('/images/tea-sector-loans-1200px.jpg')" }} />
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center py-24 px-4">
           <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight uppercase text-white drop-shadow-lg">
-            NEXT GENERATION<br />VOICE AI
+            BM AI<br />COMMUNICATION PLATFORM
           </h1>
-          <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">Transform your customer service and outreach with BM AI’s Inbound and Outbound Voice Agents. Human-like conversations. Zero wait times. 24/7 automation.</p>
+          <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">Unified communication platform for SMS, Voice Calls, WhatsApp, and Tools. AI-powered conversations. Zero wait times. 24/7 automation across all channels.</p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
-            <Link href="/#demo" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">How it Works</Link>
+            <Link href="/#services" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">Our Services</Link>
             <Link href="/pricing" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all">Get Pricing</Link>
           </div>
         </div>
@@ -78,54 +78,116 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Inbound/Outbound Split Section */}
-      <section className="py-24 bg-black/95 border-t border-white/10">
+      {/* Services Section */}
+      <section id="services" className="py-24 bg-black/95 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">AI Voice Agents for Every Need</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Inbound AI */}
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-xl">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">Inbound AI Agent</h3>
-                <p className="text-white/80 mb-6">Handle incoming customer calls, answer questions, process transactions, and provide 24/7 support in English & Swahili. Perfect for banks, telcos, and enterprises seeking to automate and enhance customer experience.</p>
-                <ul className="mb-6 space-y-3 text-white/80">
-                  {[
-                    'Natural language understanding',
-                    'Real-time account info & transactions',
-                    'Bilingual (English & Swahili)',
-                    'Secure, PCI DSS compliant',
-                    'Analytics & reporting',
-                  ].map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-base">
-                      <FiCheck className="text-green-400 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+          <h2 className="text-3xl md:text-5xl font-black mb-4 text-center uppercase tracking-tight">Our Services</h2>
+          <p className="text-xl text-white/70 mb-12 text-center max-w-2xl mx-auto">Unified communication platform across SMS, Voice Calls, WhatsApp, and Tools</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* SMS Service */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col shadow-xl hover:border-white/20 transition-all">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">SMS</h3>
+                <p className="text-white/80 mb-6">Send and receive SMS messages with AI-powered conversations. Manage conversations, track analytics, and automate customer communications via text messaging.</p>
               </div>
-              <Link href="/inbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</Link>
+              <ul className="mb-6 space-y-3 text-white/80 flex-grow">
+                {[
+                  'SMS Conversations',
+                  'SMS Analytics',
+                  'Bulk messaging',
+                  'Two-way communication',
+                  'Automated responses',
+                ].map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-base">
+                    <FiCheck className="text-green-400 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            {/* Outbound AI */}
-            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between shadow-xl">
-              <div>
-                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">Outbound AI Agent</h3>
-                <p className="text-white/80 mb-6">Automate outbound calls for reminders, collections, notifications, surveys, and more. Reach thousands instantly with personalized, interactive voice calls—no human agent required.</p>
-                <ul className="mb-6 space-y-3 text-white/80">
-                  {[
-                    'Bulk & scheduled calling',
-                    'Personalized scripts',
-                    'Payment & appointment reminders',
-                    'Surveys & feedback collection',
-                    'Emergency notifications',
-                  ].map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-base">
-                      <FiCheck className="text-green-400 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+            {/* Voice & Telephony Service */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col shadow-xl hover:border-white/20 transition-all">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M13 2a9 9 0 0 1 9 9"></path>
+                    <path d="M13 6a5 5 0 0 1 5 5"></path>
+                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">Voice & Telephony</h3>
+                <p className="text-white/80 mb-6">AI-powered voice calls for inbound and outbound communications. Handle customer calls, make automated calls, and manage call history with intelligent voice agents.</p>
               </div>
-              <Link href="/outbound" className="mt-4 inline-block bg-white text-black px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/90 transition-all">Learn More</Link>
+              <ul className="mb-6 space-y-3 text-white/80 flex-grow">
+                {[
+                  'Voice Calls (Inbound & Outbound)',
+                  'Call History & Analytics',
+                  'Live Voice Sessions',
+                  'Bilingual (English & Swahili)',
+                ].map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-base">
+                    <FiCheck className="text-green-400 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* WhatsApp Service */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col shadow-xl hover:border-white/20 transition-all">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">WhatsApp</h3>
+                <p className="text-white/80 mb-6">Connect with customers on WhatsApp. Manage conversations, make voice calls, and leverage WhatsApp Business API for automated customer communications.</p>
+              </div>
+              <ul className="mb-6 space-y-3 text-white/80 flex-grow">
+                {[
+                  'WhatsApp Conversations',
+                  'WhatsApp Voice Calls',
+                  'WhatsApp Analytics',
+                  'Automated messaging',
+                  'Media sharing support',
+                ].map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-base">
+                    <FiCheck className="text-green-400 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* Tools Service */}
+            <div className="bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col shadow-xl hover:border-white/20 transition-all">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
+                    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 uppercase tracking-wide text-white">Tools</h3>
+                <p className="text-white/80 mb-6">Powerful tools and integrations to enhance your communication workflows. Access custom tools, marketplace solutions, and survey capabilities.</p>
+              </div>
+              <ul className="mb-6 space-y-3 text-white/80 flex-grow">
+                {[
+                  'My Tools',
+                  'Tool Marketplace',
+                  'Surveys & Feedback',
+                  'Custom integrations',
+                  'Workflow automation',
+                ].map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-3 text-base">
+                    <FiCheck className="text-green-400 flex-shrink-0" />
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
@@ -134,7 +196,7 @@ export default function Home() {
       {/* USPs Section */}
       <section className="py-24 bg-black border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">Why Choose BM</h2>
+          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">Why Choose BM AI</h2>
           <div className="grid md:grid-cols-3 gap-10">
             <div className="bg-black border border-white/20 rounded-3xl p-10 flex flex-col items-center text-center shadow-xl">
               <FiZap size={64} color="white" strokeWidth={1.5} className="mb-6" />
@@ -182,64 +244,92 @@ export default function Home() {
       <section id="use-cases" className="py-24 bg-black/95 border-t border-white/10">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-5xl font-black mb-12 text-center uppercase tracking-tight">Use Cases</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Inbound Use Cases */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* SMS Use Cases */}
             <div>
-              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">Inbound Use Cases</h3>
-              <div className="space-y-6">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Customer Support Hotlines</span>
-                  <span className="text-white/80">Banks, telcos, insurance, retail</span>
+              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">SMS</h3>
+              <div className="space-y-4">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Notifications & Alerts</span>
+                  <span className="text-white/70 text-sm">Order updates, appointment reminders</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Account & Transaction Queries</span>
-                  <span className="text-white/80">Balance checks, transaction history, statements</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Two-Way Conversations</span>
+                  <span className="text-white/70 text-sm">Customer support via SMS</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Service Information & FAQs</span>
-                  <span className="text-white/80">Automated answers to common questions</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Bulk Messaging</span>
+                  <span className="text-white/70 text-sm">Campaigns and announcements</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Complaint Resolution</span>
-                  <span className="text-white/80">Automated intake and escalation</span>
-                </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Automated Self-Service</span>
-                  <span className="text-white/80">PIN resets, bill payments, service activation</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">OTP & Verification</span>
+                  <span className="text-white/70 text-sm">Security codes and confirmations</span>
                 </div>
               </div>
             </div>
-            {/* Outbound Use Cases */}
+            {/* Voice Use Cases */}
             <div>
-              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">Outbound Use Cases</h3>
-              <div className="space-y-6">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Debt Recovery</span>
-                  <span className="text-white/80">Banks, microfinance, loan companies</span>
+              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">Voice & Telephony</h3>
+              <div className="space-y-4">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Customer Support</span>
+                  <span className="text-white/70 text-sm">24/7 inbound call handling</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Bill Reminders</span>
-                  <span className="text-white/80">Utilities, telecom, insurance</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Outbound Campaigns</span>
+                  <span className="text-white/70 text-sm">Reminders, collections, surveys</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">School Communication</span>
-                  <span className="text-white/80">Fee reminders, event notifications, emergency alerts</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Account Queries</span>
+                  <span className="text-white/70 text-sm">Balance checks, transactions</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Appointment Reminders</span>
-                  <span className="text-white/80">Hospitals, clinics, service providers</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Emergency Alerts</span>
+                  <span className="text-white/70 text-sm">Critical notifications via calls</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Survey & Feedback</span>
-                  <span className="text-white/80">Market research, customer satisfaction</span>
+              </div>
+            </div>
+            {/* WhatsApp Use Cases */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">WhatsApp</h3>
+              <div className="space-y-4">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Customer Chat</span>
+                  <span className="text-white/70 text-sm">Real-time WhatsApp conversations</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Lead Generation</span>
-                  <span className="text-white/80">Sales calls, product promotions</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Voice & Video Calls</span>
+                  <span className="text-white/70 text-sm">WhatsApp calling integration</span>
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow flex flex-col items-start">
-                  <span className="text-lg font-bold text-white mb-2">Emergency Notifications</span>
-                  <span className="text-white/80">Government alerts, safety warnings</span>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Media Sharing</span>
+                  <span className="text-white/70 text-sm">Send images, documents, videos</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Business Messaging</span>
+                  <span className="text-white/70 text-sm">WhatsApp Business API automation</span>
+                </div>
+              </div>
+            </div>
+            {/* Tools Use Cases */}
+            <div>
+              <h3 className="text-xl font-bold mb-6 uppercase tracking-wide text-white">Tools</h3>
+              <div className="space-y-4">
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Custom Tools</span>
+                  <span className="text-white/70 text-sm">Build and manage your own tools</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Tool Marketplace</span>
+                  <span className="text-white/70 text-sm">Discover and integrate tools</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Surveys & Polls</span>
+                  <span className="text-white/70 text-sm">Create and manage surveys</span>
+                </div>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 shadow">
+                  <span className="text-base font-bold text-white block mb-1">Workflow Automation</span>
+                  <span className="text-white/70 text-sm">Automate business processes</span>
                 </div>
               </div>
             </div>

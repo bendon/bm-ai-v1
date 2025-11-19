@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BM AI Voice Bot - Next-Generation Voice AI Technology",
-  description: "Revolutionary AI voice technology that understands natural language and eliminates wait times. Transform your customer service with human-like conversations in English and Swahili.",
-  keywords: "AI voice bot, customer service, natural language processing, Swahili, English, Kenya, voice AI, chatbot",
-  authors: [{ name: "BM AI Voice Bot" }],
+  title: "BM AI - Unified Communication Platform | SMS, Voice & WhatsApp",
+  description: "Unified communication platform for SMS, Voice Calls, and WhatsApp. AI-powered conversations across all channels. Zero wait times. 24/7 automation in English and Swahili.",
+  keywords: "BM AI, SMS, voice calls, WhatsApp, AI communication platform, customer service, natural language processing, Swahili, English, Kenya, voice AI, chatbot, messaging",
+  authors: [{ name: "BM AI" }],
   openGraph: {
-    title: "BM AI Voice Bot - Next-Generation Voice AI",
-    description: "Transform your customer service with AI voice technology that speaks English and Swahili",
+    title: "BM AI - Unified Communication Platform",
+    description: "SMS, Voice Calls, and WhatsApp - All in one AI-powered communication platform",
     type: "website",
   },
 };

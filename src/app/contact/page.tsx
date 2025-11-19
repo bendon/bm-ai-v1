@@ -46,14 +46,14 @@ export default function Contact() {
       title: "Email Us",
       details: "bm@payl.to",
       description: "Send us an email and we'll respond within 24 hours",
-      action: "mailto:bm@payl.to?subject=BM AI Voice Bot Inquiry"
+      action: "mailto:bm@payl.to?subject=BM AI Inquiry"
     },
     {
       icon: <FiPhone size={32} className="stroke-1" />,
       title: "Call Us",
-      details: "+254 736 355183",
+      details: "+254 - 743 - 799799",
       description: "Speak directly with our team during business hours",
-      action: "tel:+254736355183"
+      action: "tel:+254743799799"
     },
     {
       icon: <FiMapPin size={32} className="stroke-1" />,
@@ -65,9 +65,9 @@ export default function Contact() {
     {
       icon: <FiMessageCircle size={32} className="stroke-1" />,
       title: "Live Demo",
-      details: "+254 711 082454",
-      description: "Call for a live demonstration of BM AI Voice Bot",
-      action: "tel:+254711082454"
+      details: "+254 709 369940",
+      description: "Call for a live demonstration of BM AI",
+      action: "tel:+254709369940"
     }
   ];
 
@@ -93,8 +93,8 @@ export default function Contact() {
             GET IN TOUCH
           </h1>
                         <p className="text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Ready to transform your customer service with BM AI Voice Bot? 
-                We&apos;re here to help you get started.
+                Ready to transform your customer communication with BM AI? 
+                We&apos;re here to help you get started with SMS, Voice Calls, WhatsApp, and Tools.
               </p>
         </div>
       </section>
@@ -275,18 +275,18 @@ export default function Contact() {
                       bm@payl.to
                     </a>
                     <a 
-                      href="tel:+254736355183"
+                      href="tel:+254743799799"
                       className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
                     >
                       <FiPhone size={20} className="stroke-1" />
-                      +254 736 355183
+                      +254 - 743 - 799799
                     </a>
                     <a 
-                      href="tel:+254711082454"
+                      href="tel:+254709369940"
                       className="flex items-center gap-3 text-white/80 hover:text-white transition-colors"
                     >
                       <FiMessageCircle size={20} className="stroke-1" />
-                      Demo: +254 711 082454
+                      Demo: +254 709 369940
                     </a>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function Contact() {
               },
               {
                 question: "Can I schedule a demo?",
-                answer: "Absolutely! You can call our demo line at +254 711 082454 or request a demo through our contact form."
+                answer: "Absolutely! You can call our demo line at +254 709 369940 or request a demo through our contact form."
               },
               {
                 question: "What information should I include in my inquiry?",

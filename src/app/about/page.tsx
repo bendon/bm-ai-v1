@@ -39,7 +39,7 @@ export default function About() {
     {
       year: "2023",
       title: "Foundation",
-      description: "BM AI Voice Bot concept developed with focus on Kenyan market needs"
+      description: "BM AI concept developed with focus on Kenyan market needs"
     },
     {
       year: "2024",
@@ -49,7 +49,7 @@ export default function About() {
     {
       year: "2025",
       title: "Launch",
-      description: "BM AI Voice Bot officially launched with enterprise-grade infrastructure"
+      description: "BM AI unified communication platform officially launched with enterprise-grade infrastructure"
     }
   ];
 
@@ -66,11 +66,11 @@ export default function About() {
           </Link>
           
           <h1 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tight">
-            ABOUT BM AI<br />VOICE BOT
+            ABOUT BM AI
           </h1>
           <p className="text-xl text-white/80 mb-12 max-w-4xl mx-auto leading-relaxed">
-            We&apos;re revolutionizing customer service in Kenya and beyond with next-generation AI voice technology 
-            that understands natural language in both English and Swahili.
+            We&apos;re revolutionizing customer communication in Kenya and beyond with a unified AI-powered platform 
+            for SMS, Voice Calls, WhatsApp, and Tools. Our technology understands natural language in both English and Swahili.
           </p>
         </div>
       </section>
@@ -85,9 +85,9 @@ export default function About() {
                 <h2 className="text-3xl font-black uppercase tracking-tight">Our Mission</h2>
               </div>
               <p className="text-xl text-white/80 mb-6 leading-relaxed">
-                To eliminate wait times and language barriers in customer service by providing 
-                intelligent, bilingual AI voice assistants that understand and serve customers 
-                in their preferred language.
+                To eliminate wait times and language barriers in customer communication by providing 
+                intelligent, bilingual AI assistants across SMS, Voice Calls, WhatsApp, and Tools that understand 
+                and serve customers in their preferred language and channel.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-white/90">
@@ -111,9 +111,9 @@ export default function About() {
                 <h2 className="text-3xl font-black uppercase tracking-tight">Our Vision</h2>
               </div>
               <p className="text-xl text-white/80 mb-6 leading-relaxed">
-                To become the leading AI voice technology provider in East Africa, 
+                To become the leading unified communication platform in East Africa, 
                 empowering businesses to deliver exceptional customer experiences 
-                through intelligent, multilingual AI assistants.
+                through intelligent, multilingual AI assistants across all communication channels.
               </p>
               <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
                 <h3 className="text-xl font-bold mb-4">Core Values</h3>
@@ -146,8 +146,8 @@ export default function About() {
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight">Our Team</h2>
             </div>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Meet the experts behind BM AI Voice Bot - a dedicated team of AI engineers, 
-              language specialists, and customer success professionals.
+              Meet the experts behind BM AI - a dedicated team of AI engineers, 
+              language specialists, and customer success professionals building the future of communication.
             </p>
           </div>
           
@@ -249,7 +249,7 @@ export default function About() {
               View Pricing
             </Link>
             <a 
-              href="mailto:bm@payl.to?subject=BM AI Voice Bot Inquiry&body=Hello, I'm interested in learning more about BM AI Voice Bot for my organization."
+              href="mailto:bm@payl.to?subject=BM AI Inquiry&body=Hello, I'm interested in learning more about BM AI communication platform for my organization."
               className="bg-white/10 text-white border border-white/30 px-12 py-6 rounded-2xl text-xl font-semibold hover:bg-white/20 hover:-translate-y-1 hover:shadow-2xl transition-all flex items-center gap-3 justify-center"
             >
               Contact Us
