@@ -156,7 +156,20 @@ export default function Home() {
                 ].map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-3 text-base">
                     <FiCheck className="text-green-400 flex-shrink-0" />
-                    <span>{feature}</span>
+                    <span
+                      className={
+                        feature === 'WhatsApp Voice Calls'
+                          ? 'text-red-400 font-semibold'
+                          : undefined
+                      }
+                    >
+                      {feature}
+                      {feature === 'WhatsApp Voice Calls' && (
+                        <span className="text-red-300 font-normal text-sm ml-2">
+                          (highly technical setup required)
+                        </span>
+                      )}
+                    </span>
                   </li>
                 ))}
               </ul>
