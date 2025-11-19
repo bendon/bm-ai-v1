@@ -2,52 +2,23 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const solutionsDropdown = [
-    { href: '/#services', label: 'All Services' },
-    { href: '/#services', label: 'SMS' },
-    { href: '/#services', label: 'Voice & Telephony' },
-    { href: '/#services', label: 'WhatsApp' },
-    { href: '/#use-cases', label: 'Use Cases' },
-  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-xl border-b border-white/10 px-4 py-4 shadow-lg">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold tracking-[2px] uppercase">BM</Link>
+        <Link
+          href="/"
+          className="text-2xl md:text-3xl font-black tracking-[2px] uppercase flex items-center h-10"
+        >
+          BM
+        </Link>
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 list-none items-center">
-          {/* Solutions Dropdown */}
-          <li className="relative">
-            <button
-              className="flex items-center gap-1 text-white/80 hover:text-white transition-colors font-medium focus:outline-none"
-              onClick={() => setIsDropdownOpen((open) => !open)}
-              onBlur={() => setTimeout(() => setIsDropdownOpen(false), 150)}
-            >
-              Solutions <FiChevronDown size={16} />
-            </button>
-            {isDropdownOpen && (
-              <ul className="absolute left-0 mt-2 w-48 bg-black border border-white/10 rounded-lg shadow-xl z-50">
-                {solutionsDropdown.map((item) => (
-                  <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 transition-colors rounded-lg"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-          {/* Other menu items */}
+          {/* Menu items */}
           <li><Link href="/#services" className="text-white/80 hover:text-white transition-colors font-medium">Services</Link></li>
           <li><Link href="/#demo" className="text-white/80 hover:text-white transition-colors font-medium">How it Works</Link></li>
           <li><Link href="/pricing" className="text-white/80 hover:text-white transition-colors font-medium">Pricing</Link></li>
@@ -83,25 +54,6 @@ export default function Navigation() {
       {isMenuOpen && (
         <div className="md:hidden mt-4 pb-4 border-t border-white/10 relative">
           <ul className="flex flex-col gap-4 mt-4 mb-28">
-            {/* Solutions Dropdown (mobile) */}
-            <li>
-              <details>
-                <summary className="text-white/80 hover:text-white py-2 font-medium cursor-pointer flex items-center gap-1">Solutions <FiChevronDown size={16} /></summary>
-                <ul className="pl-4 mt-2">
-                  {solutionsDropdown.map((item) => (
-                    <li key={item.label}>
-                      <Link
-                        href={item.href}
-                        className="block text-white/80 hover:text-white py-2"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </details>
-            </li>
             <li><Link href="/#services" className="block text-white/80 hover:text-white py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
             <li><Link href="/#demo" className="block text-white/80 hover:text-white py-2 font-medium" onClick={() => setIsMenuOpen(false)}>How it Works</Link></li>
             <li><Link href="/pricing" className="block text-white/80 hover:text-white py-2 font-medium" onClick={() => setIsMenuOpen(false)}>Pricing</Link></li>

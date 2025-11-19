@@ -40,11 +40,13 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-[70vh] flex items-center relative overflow-hidden bg-black">
         <div className="absolute inset-0 bg-cover bg-center bg-fixed" style={{ backgroundImage: "linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.8) 100%), url('/images/tea-sector-loans-1200px.jpg')" }} />
-        <div className="relative z-10 w-full max-w-4xl mx-auto text-center py-24 px-4">
-          <h1 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight uppercase text-white drop-shadow-lg">
+        <div className="relative z-10 w-full max-w-3xl lg:max-w-4xl mx-auto text-center py-20 sm:py-24 px-4 sm:px-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-8 leading-[1.05] tracking-tight uppercase text-white drop-shadow-lg break-words">
             BM AI<br />COMMUNICATION PLATFORM
           </h1>
-          <p className="text-2xl md:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">Unified communication platform for SMS, Voice Calls, WhatsApp, and Tools. AI-powered conversations. Zero wait times. 24/7 automation across all channels.</p>
+          <p className="text-lg sm:text-xl md:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            Unified communication platform for SMS, Voice Calls, WhatsApp, and Tools. AI-powered conversations. Zero wait times. 24/7 automation across all channels.
+          </p>
           <div className="flex flex-col md:flex-row gap-6 justify-center">
             <Link href="/#services" className="bg-white text-black px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/90 transition-all hover:-translate-y-1 hover:shadow-2xl">Our Services</Link>
             <Link href="/pricing" className="bg-transparent text-white border border-white/30 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white/10 hover:border-white/60 transition-all">Get Pricing</Link>

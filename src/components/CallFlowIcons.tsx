@@ -238,7 +238,7 @@ export const CallFlowDiagrams = () => {
           <h3 className="text-xl font-bold mb-10 uppercase tracking-wide text-white text-center w-full max-w-4xl">Inbound Call Flow</h3>
         </div>
         <div className="flex justify-center">
-          <div className="flex flex-col md:flex-row items-center md:items-end justify-center gap-10 md:gap-0 w-full max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center md:items-center justify-center gap-10 md:gap-0 w-full max-w-4xl">
             {inboundSteps.map((step, idx) => (
               <React.Fragment key={step.label}>
                 <div className="flex flex-col items-center w-full max-w-xs md:flex-1 snap-start">
@@ -274,7 +274,7 @@ export const CallFlowDiagrams = () => {
           <h3 className="text-xl font-bold mb-10 uppercase tracking-wide text-white text-center w-full max-w-4xl">Outbound Call Flow</h3>
         </div>
         <div className="flex justify-center">
-          <div className="flex flex-col md:flex-row items-center md:items-end justify-center gap-10 md:gap-0 w-full max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center md:items-center justify-center gap-10 md:gap-0 w-full max-w-4xl">
             {outboundSteps.map((step, idx) => (
               <React.Fragment key={step.label}>
                 <div className="flex flex-col items-center w-full max-w-xs md:flex-1 snap-start">
