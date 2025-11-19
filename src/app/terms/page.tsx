@@ -32,8 +32,8 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-white">1. Acceptance of Terms</h2>
               <p>
-                These Terms of Service ("Terms") govern your access to and use of BM AI services, a product of EdgeTech Consults Ltd 
-                ("we," "us," or "our"). By accessing or using our services, you agree to be bound by these Terms. If you do not agree 
+                These Terms of Service (&quot;Terms&quot;) govern your access to and use of BM AI services, a product of EdgeTech Consults Ltd 
+                (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing or using our services, you agree to be bound by these Terms. If you do not agree 
                 to these Terms, you may not use our services.
               </p>
             </section>
@@ -188,7 +188,7 @@ export default function Terms() {
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Posting the updated Terms on our website</li>
-                <li>Updating the "Last Updated" date</li>
+                <li>Updating the &quot;Last Updated&quot; date</li>
                 <li>Sending email notifications for material changes</li>
               </ul>
               <p className="mt-4">

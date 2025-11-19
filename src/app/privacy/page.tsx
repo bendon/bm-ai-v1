@@ -32,7 +32,7 @@ export default function Privacy() {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-white">1. Introduction</h2>
               <p>
-                EdgeTech Consults Ltd ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. 
+                EdgeTech Consults Ltd (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy and ensuring the security of your personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use BM AI services, visit our website, 
                 or interact with us.
               </p>
@@ -213,7 +213,7 @@ export default function Privacy() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold mb-4 text-white">10. Children's Privacy</h2>
+              <h2 className="text-2xl font-bold mb-4 text-white">10. Children&apos;s Privacy</h2>
               <p>
                 Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. 
                 If you believe we have collected information from a child, please contact us immediately.
@@ -233,7 +233,7 @@ export default function Privacy() {
               <p>We may update this Privacy Policy periodically to reflect changes in our practices or legal requirements. We will notify you of significant changes by:</p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
                 <li>Posting the updated policy on our website</li>
-                <li>Updating the "Last Updated" date</li>
+                <li>Updating the &quot;Last Updated&quot; date</li>
                 <li>Sending email notifications for material changes</li>
               </ul>
             </section>

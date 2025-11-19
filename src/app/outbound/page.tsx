@@ -27,7 +27,7 @@ export default function OutboundAI() {
       <Navigation />
       <section className="pt-32 pb-16 text-center">
         <h1 className="text-4xl md:text-6xl font-black mb-8 uppercase tracking-tight">Voice & Telephony - Outbound</h1>
-        <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">Part of BM AI's unified communication platform. Automate outbound calls for reminders, collections, notifications, surveys, and more. Reach thousands instantly with personalized, interactive voice calls. Also available via SMS, WhatsApp, and Tools.</p>
+        <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">Part of BM AI&apos;s unified communication platform. Automate outbound calls for reminders, collections, notifications, surveys, and more. Reach thousands instantly with personalized, interactive voice calls. Also available via SMS, WhatsApp, and Tools.</p>
       </section>
       <section className="py-12 max-w-5xl mx-auto px-4">
         <h2 className="text-2xl font-bold mb-6 uppercase tracking-wide">Key Features</h2>

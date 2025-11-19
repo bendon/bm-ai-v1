@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import { 
   FiZap, 
@@ -32,10 +32,6 @@ export default function Home() {
     document.addEventListener('click', handleSmoothScroll);
     return () => document.removeEventListener('click', handleSmoothScroll);
   }, []);
-
-  const simulateCall = () => {
-    alert("🎤 Connecting to BM AI...\n\nNiaje!\nI'm BM, your AI Assistant.\nNaweza kukusaidia in English or Swahili.\nHow may I help you today?\n\n(This is a demo preview)");
-  };
 
   return (
     <div className="bg-black text-white">

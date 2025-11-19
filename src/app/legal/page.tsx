@@ -95,7 +95,7 @@ export default function Legal() {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-white">Warranties and Disclaimers</h2>
               <p>
-                BM AI services are provided "as is" and "as available" without warranties of any kind, either express or implied, 
+                BM AI services are provided &quot;as is&quot; and &quot;as available&quot; without warranties of any kind, either express or implied, 
                 including but not limited to:
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-2">
@@ -109,7 +109,7 @@ export default function Legal() {
             <section>
               <h2 className="text-2xl font-bold mb-4 text-white">Limitation of Liability</h2>
               <p>
-                To the maximum extent permitted by law, EdgeTech Consults Ltd's total liability for any claims arising from or related 
+                To the maximum extent permitted by law, EdgeTech Consults Ltd&apos;s total liability for any claims arising from or related 
                 to BM AI services shall not exceed the amount you paid for the services in the twelve (12) months preceding the claim.
               </p>
             </section>
